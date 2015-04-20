@@ -1,0 +1,6 @@
+-Dlocal.path.teller=C:\queue
+-Dlocal.path.cs=C:\queue
+-Dtime.cs=3
+-Dtime.teller=3
+-Dlock.qcty=C:\lockQty
+-Dtime.autorefresh=15

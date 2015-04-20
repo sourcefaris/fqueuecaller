@@ -1,0 +1,29 @@
+<project name="contingencyqueue" default="contingencyqueue" basedir=".">
+  <target name="contingencyqueue">
+      <patternset id="contingencyqueueid">
+        <include name="com/permata/branch/commons/*.*"/>
+        <include name="com/permata/branch/domain/*.*"/>
+      	<include name="com/permata/queue/common/*.*"/>
+      	<include name="com/permata/queue/forms/*.*"/>
+        <include name="com/permata/queue/res/*.*"/>
+        <include name="com/permata/sns/commons/*.*"/>
+        <include name="com/rubean/beantable/*.*"/>
+        <include name="com/rubean/rcms/cash/*.*"/>
+        <include name="com/rubean/rcms/cash/forms/*.*"/>
+      	<include name="com/rubean/rcms/cash/forms/permata/*.*"/>
+        <include name="com/rubean/rcms/cash/ui/*.*"/>
+        <include name="com/rubean/rcms/cash/ui/images/*.*"/>
+        <include name="com/rubean/rcms/ui/*.*"/>
+      	<include name="com/rubean/rcms/ui/images/*.*"/>
+      </patternset>	  
+
+     <jar destfile="contingency-queue-temp.jar">
+      <fileset dir="." casesensitive="yes">
+      <patternset refid="contingencyqueueid"/>
+      <exclude name="**/*.java"/>
+      </fileset>  
+    </jar>   
+
+	<signjar jar="contingency-queue-temp.jar" alias="permata" keystore=".keystore" storepass="password" verbose="false" signedjar="contingency-queue.jar"/>
+  </target>
+</project>
